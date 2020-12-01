@@ -17,20 +17,20 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
 
-  # def setup
-  #   OmniAuth.config.test_mode = true
-  # end
+  def setup
+    OmniAuth.config.test_mode = true
+  end
 
-  # def mock_auth_hash(user)
-  #   return {
-  #     provider: user.provider,
-  #     uid: user.uid,
-  #     info: {
-  #       email: user.email,
-  #       nickname: user.username
-  #     }
-  #   }
-  # end
+  def mock_auth_hash(user)
+    return {
+      provider: user.provider,
+      uid: user.uid,
+      info: {
+        email: user.email,
+        nickname: user.username
+      }
+    }
+  end
 
   # def perform_login(user = nil)
   #   user ||= User.first
